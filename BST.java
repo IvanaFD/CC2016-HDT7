@@ -14,14 +14,14 @@ public class BST<K,V> {
         else root.insert(k, v, comparator);
     }
 
-    public void inorder () {
+    public void inOrder () {
         if (root == null) System.out.println("Empty tree!");
-        else root.inorder();
+        else root.inOrder();
     }
     
     public V SearchforKey (K key) {
         if (root == null) return null;
-        return root.SearchforKey(key, comparator);
+        return root.SearchForKey(key, comparator);
     }
        
 

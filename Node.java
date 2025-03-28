@@ -37,21 +37,21 @@ public class Node<K,V> {
         }
     }
 
-    public void inorder() {
-        if (left != null) left.inorder();
+    public void inOrder() {
+        if (left != null) left.inOrder();
         System.out.println(pair.getKey() + " " + pair.getValue());
-        if (right != null) right.inorder();
+        if (right != null) right.inOrder();
     }
 
-    public V SearchforKey(K key, Comparator<K> comp) {
+    public V SearchForKey(K key, Comparator<K> comp) {
         if (comp.compare(key, pair.getKey()) == 0) {
             return pair.getValue();
         } 
         else if (comp.compare(key, pair.getKey()) < 0) {
-            return left != null ? left.SearchforKey(key, comp) : null;
+            return left != null ? left.SearchForKey(key, comp) : null;
         } 
         else {
-            return right != null ? right.SearchforKey(key, comp) : null;
+            return right != null ? right.SearchForKey(key, comp) : null;
         }
     }
    
