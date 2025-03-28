@@ -33,7 +33,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Producto{" + "SKU='" + SKU + '\'' + ", nombre='" + nombre + '\'' + "Descripcion: "+ descripcion+ ", inventario= " + inventario + '}';
+        return "Producto{" + "SKU='" + SKU + ", nombre='" + nombre + '\'' + "Descripcion: "+ descripcion+ ", inventario= " + inventario + '}';
     }
 
     
