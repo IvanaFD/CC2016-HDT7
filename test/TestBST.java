@@ -1,3 +1,4 @@
+package test;
 /**
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de Datos
@@ -8,6 +9,10 @@
  * Pruebas unitarias para la clase BST con productos
  */
 import org.junit.*;
+
+import BST;
+import Product;
+
 import java.util.Comparator;
 import java.io.*;
 import static org.junit.Assert.*;

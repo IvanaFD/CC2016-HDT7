@@ -54,8 +54,8 @@ public class Main {
                    
                 case 2:
 
-                System.out.print("Ingrese SKU: ");
-                String nombre = scanner.nextLine();
+                System.out.print("Ingrese nombre: ");
+                String nombre = scanner.nextLine().toLowerCase();
                 Product productoN = controller.arbolPorNombre.Search(nombre);
                 if (productoN != null) {
                     System.out.println("Producto encontrado: " + productoN);
