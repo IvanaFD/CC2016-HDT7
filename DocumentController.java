@@ -6,8 +6,8 @@ import java.util.Comparator;
 
 public class DocumentController {
 
-    private final BST<String, Product> arbolPorSKU;
-    private final BST<String, Product> arbolPorNombre;
+    public final BST<String, Product> arbolPorSKU;
+    public final BST<String, Product> arbolPorNombre;
     
     public DocumentController(){
         this.arbolPorSKU = new BST<>(Comparator.<String>naturalOrder());
@@ -29,13 +29,13 @@ public class DocumentController {
                 
                     String SKU = columna[0].trim();
                     String nombre = columna[1].trim();
-                    String descripcion = columna[2].trim();
-                    String inventario = columna[3].trim();
+                    String descripcion = columna[3].trim();
+                    String inventario = columna[2].trim();
 
                     Product producto = new Product(SKU,nombre, descripcion, inventario);
 
                     arbolPorSKU.insert(SKU,producto);
-                    arbolPorNombre.insert(nombre, producto);
+                    arbolPorNombre.insert(nombre.toLowerCase(), producto);
                     
 
 

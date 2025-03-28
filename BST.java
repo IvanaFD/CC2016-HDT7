@@ -19,8 +19,10 @@ public class BST<K,V> {
         else root.inOrder();
     }
     
-    public V SearchforKey (K key) {
-        if (root == null) return null;
+    public V Search(K key) {
+        if (key == null || root == null) {
+            return null;
+        }
         return root.SearchForKey(key, comparator);
     }
        

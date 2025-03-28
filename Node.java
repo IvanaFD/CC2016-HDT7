@@ -44,13 +44,12 @@ public class Node<K,V> {
     }
 
     public V SearchForKey(K key, Comparator<K> comp) {
-        if (comp.compare(key, pair.getKey()) == 0) {
+        int comparison = comp.compare(key, pair.getKey());
+        if (comparison == 0) {
             return pair.getValue();
-        } 
-        else if (comp.compare(key, pair.getKey()) < 0) {
+        } else if (comparison < 0) {
             return left != null ? left.SearchForKey(key, comp) : null;
-        } 
-        else {
+        } else {
             return right != null ? right.SearchForKey(key, comp) : null;
         }
     }
