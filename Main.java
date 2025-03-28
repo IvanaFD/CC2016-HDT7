@@ -1,3 +1,14 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * Hoja de Trabajo 7
+ * Ivana Figueroa - 24785
+ * 
+ * Clase Main
+ * Permite la interaccion con el usario
+ */
+
+
 import java.util.Scanner;
 import java.io.IOException;
 
